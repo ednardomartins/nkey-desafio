@@ -3,12 +3,14 @@ package com.nkey.desafio;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Random;
 import java.util.Set;
 
 import org.springframework.boot.SpringApplication;
@@ -43,11 +45,31 @@ public class DesafioApplication {
 			json = json.substring(1, json.length() -1).replace("\\\"", "");
 			String novoJson = "{ \"product\": " + json + "}";
 			System.out.println(novoJson);
+
+//			Random random = new Random();
+//	        URL url = new URL("https://testapi.io/api/ednardomartins/robloxy/produto");
+//	        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//	        connection.setRequestMethod("PUT");
+//	        connection.setDoOutput(true);
+//	        
+//	        //Authentication Bearer
+//	        connection.setRequestProperty("Authorization", "Bearer" + "robloxytest");
+//	        //connection.setRequestProperty("Content-Type", "application/json");
+//	        connection.setRequestProperty("Accept", "application/json");
+//	        
+//	        OutputStreamWriter osw = new OutputStreamWriter(connection.getOutputStream());
+//	        osw.write(novoJson , random.nextInt(30), random.nextInt(20));
+//	        osw.flush();
+//	        osw.close();
+//	        connection.connect();
+//	        System.err.println(connection.getResponseCode());
+//	        connection.disconnect();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			if (con != null)
 				con.disconnect();
+			
 		}
 
 	}
@@ -103,7 +125,6 @@ public class DesafioApplication {
 							}
 							
 							categoria.addVariante(variante);
-							//categoria.setIpi("10000");
 						}
 						produtoIFAC.add(categoria);
 					}
