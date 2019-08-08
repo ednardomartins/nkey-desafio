@@ -9,9 +9,9 @@ public class Produto {
 	private String referenceCode;
 	private String stockControl;
 	private String eanCode;
-	private String ipi;
+	private Double ipi;
 	private List<Variante> variants;
-	
+
 	public List<Variante> getVariantes() {
 		return variants;
 	}
@@ -26,8 +26,6 @@ public class Produto {
 			this.variants = new ArrayList<Variante>();
 		this.variants.add(variante);
 	}
-
-
 
 	public String getCategoria() {
 		return stockControl;
@@ -61,11 +59,11 @@ public class Produto {
 		this.name = nome;
 	}
 
-	public String getIpi() {
+	public Double getIpi() {
 		return ipi;
 	}
 
-	public void setIpi(String ipi) {
+	public void setIpi(Double ipi) {
 		this.ipi = ipi;
 	}
 

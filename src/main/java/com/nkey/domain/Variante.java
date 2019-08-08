@@ -8,8 +8,8 @@ public class Variante {
 	private String referenceCode;
 	private String presentation;
 	private String price;
-	private String quantity;
-	private String ipi;
+	private Double master;
+	private Estoque stock;
 	private List<Preco> priceList;
 
 	public String getApresentacao() {
@@ -29,22 +29,6 @@ public class Variante {
 		this.referenceCode = referencia;
 	}
 
-	public String getQuantidadeEstoque() {
-		return quantity;
-	}
-
-	public void setQuantidadeEstoque(String quantidadeEstoque) {
-		this.quantity = quantidadeEstoque;
-	}
-
-	public String getIpi() {
-		return ipi;
-	}
-
-	public void setIpi(String ipi) {
-		this.ipi = ipi;
-	}
-
 	public List<Preco> getPrecos() {
 		return priceList;
 	}
@@ -56,12 +40,28 @@ public class Variante {
 
 	}
 
-	public String getPrice() {
+	public String getPreco() {
 		return price;
 	}
 
-	public void setPrice(String price) {
-		this.price = price;
+	public void setPreco(String preco) {
+		this.price = preco;
+	}
+
+	public Double getMaster() {
+		return master;
+	}
+
+	public void setMaster(Double categoria) {
+		this.master = categoria;
+	}
+
+	public Estoque getEstoque() {
+		return stock;
+	}
+
+	public void setEstoque(Estoque estoque) {
+		this.stock = estoque;
 	}
 
 }
