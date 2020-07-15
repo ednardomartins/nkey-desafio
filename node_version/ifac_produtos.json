@@ -1,0 +1,50 @@
+[
+ {
+  "categoria": 1.0,
+  "codigoReferencia": "1",
+  "eanCode": 1,
+  "nome": "CHUTEIRA NIKE",
+  "variantes": [
+   {
+    "apresentacao": "CHUTEIRA ADIDAS",
+    "codigoReferencia": "1",
+    "estoqueQuantidade": 10946.0,
+    "ipi": 0.0,
+    "listaPreco": [
+     {
+      "preco": 344.944,
+      "nome": "B2B"
+     },
+     {
+      "preco": 355.31,
+      "nome": "B2C"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "categoria": 1.0,
+  "codigoReferencia": "1",
+  "eanCode": 2,
+  "nome": "CHUTEIRA NIKE",
+  "variantes": [
+   {
+    "apresentacao": "CHUTEIRA NIKE",
+    "codigoReferencia": "1",
+    "estoqueQuantidade": 10946.0,
+    "ipi": 0.0,
+    "listaPreco": [
+     {
+      "preco": 400.94,
+      "nome": "B2B"
+     },
+     {
+      "preco": 440.31,
+      "nome": "B2C"
+     }
+    ]
+   }
+  ]
+ }
+]
