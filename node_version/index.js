@@ -1,6 +1,5 @@
 var fs = require('fs');
 const request = require('request');
-//const ifac_url = "https://testapi.io/api/ednardomartins/ifac/produtos";
 
 const percentageRate = 1.95;
 
@@ -62,7 +61,6 @@ const loopAtVariants = (variantsObj) => {
 
 const getMockData = () => {
  const jsonMock = fs.readFileSync("ifac_produtos.json", 'utf8');
- //return "a";
  return JSON.parse(jsonMock);
 }
 
@@ -79,17 +77,16 @@ const mainProcess = () => {
   mainObj.push(mainItemObj);
  }
  const mappedJson = JSON.stringify(mainObj);
- //console.log(mappedJson);
  return mappedJson;
 }
 
-const sendData = async (body) => {
+const sendData = (body) => {
  var http_req = {
   method: 'PUT',
   uri: 'https://testapi.io/api/ednardomartins/robloxy/produto',
   body: body
  };
- const res = await new Promise(
+ const res = new Promise(
   (resolve, reject) => {
    request(
     http_req,
