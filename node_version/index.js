@@ -25,8 +25,8 @@ const fillMainObj = (item) => {
 
 // Fills the Variant node of a product object
 const fillVariantObj = (variantItem) => {
- let b2bPrice = setPrice(variantItem.listaPreco[0].preco);
- let b2cPrice = setPrice(variantItem.listaPreco[1].preco, percentageRate);
+ const b2bPrice = setPrice(variantItem.listaPreco[0].preco);
+ const b2cPrice = setPrice(variantItem.listaPreco[1].preco, percentageRate);
 
  return {
   "referenceCode": variantItem.codigoReferencia,
@@ -50,13 +50,13 @@ const fillVariantObj = (variantItem) => {
 }
 
 const loopAtVariants = (variantsObj) => {
- let newVariant = [];
+ let newVariants = [];
  for (let x = 0; x < variantsObj.length; x++) {
   const variantItem = variantsObj[x];
   const variantObj = fillVariantObj(variantItem);
-  newVariant.push(variantObj);
+  newVariants.push(variantObj);
  }
- return newVariant;
+ return newVariants;
 }
 
 const getMockData = () => {
@@ -76,8 +76,7 @@ const mainProcess = () => {
   mainItemObj.variants = variantsObj;
   mainObj.push(mainItemObj);
  }
- const mappedJson = JSON.stringify(mainObj);
- return mappedJson;
+ return JSON.stringify(mainObj);
 }
 
 const sendData = (body) => {
