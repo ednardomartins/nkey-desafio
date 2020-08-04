@@ -9,7 +9,6 @@ describe('Get mock file', () => {
   expect(json[0]).toHaveProperty('codigoReferencia');
   expect(json[0]).toHaveProperty('eanCode');
   expect(json[0]).toHaveProperty('variantes');
-  expect(json[0]).toHaveProperty('variantes');
  });
 });
 
